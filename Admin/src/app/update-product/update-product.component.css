@@ -1,0 +1,77 @@
+
+.example-full-width {
+    width: 100%;
+  }
+
+  .card-header{
+    text-align: left;
+    
+
+  }
+
+  .content-header .card-header h1 {
+    background-color: #343a40; /* This is the Bootstrap dark color */
+    color: white; /* To ensure the text is readable on the dark background */
+    width: 100%; /* Makes the h1 take the full width of its container */
+    padding: 20px; /* Optional: adds some padding for better spacing */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+
+.table__head{
+    color: #FFF;
+    font-weight: 700;
+    background: #9b4085;
+    background: -moz-linear-gradient(-45deg, #9b4085 0%, #608590 100%);
+    background: -webkit-linear-gradient(-45deg, #9b4085 0%,#608590 100%);
+    background: linear-gradient(135deg, #9b4085 0%,#608590 100%);
+    white-space: nowrap;
+    }
+    .table-bordered td, .table-bordered th{
+    border: 0px solid #FFF;
+    }
+    .coin {
+    width:8%;
+    margin-left: 5px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+    }
+    @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+    @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    
+    .winner__table{
+        white-space: nowrap;
+    }
+    
+    @media screen and (max-width: 567px) {
+    
+        .winner__table{
+        font-size: 12px;
+        }
+        .coin {
+        width:15%;
+        margin-left:2px;
+        }
+    }
+
+
+/* Custom CSS for form controls */
+.form-select {
+  appearance: none; /* Removes default appearance */
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem; /* Padding for select */
+  font-size: 1rem; /* Font size */
+  line-height: 1.5; /* Line height */
+  background-color: #fff; /* Background color */
+  background-clip: padding-box; /* Background clip */
+  border: 1px solid #ced4da; /* Border */
+  border-radius: 0.25rem; /* Border radius */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Transition for border */
+}
+
+.form-select:focus {
+  border-color: #80bdff; /* Border color on focus */
+  outline: 0; /* Removes outline */
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25); /* Box shadow on focus */
+}

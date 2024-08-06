@@ -1,0 +1,92 @@
+<div class="content-header">
+    <div class="card">
+        <div class="card-header">
+            <h1>Add Special Offer</h1>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-5 col-lg-4 order-md-last">
+
+                    </div>
+                    <div class="col-md-7 col-lg-8">
+                        <form class="needs-validation" novalidate="">
+
+                            <div class="row g-3">
+
+                                <div class="col-sm-6 mt-3">
+                                    <label for="ProductCategory" class="form-label">Product Category</label>
+                                    <select class="form-control" id="ProductCategory" required>
+                                        <option value="" disabled selected>Select Product Category</option>
+                                        <option value="category1">Bottel</option>
+                                        <option value="category2">Tiffin</option>
+                                        <option value="category3">School Bag </option>
+                                        <!-- Add more options as needed -->
+                                    </select>
+                                </div>
+
+
+                                <div class="col-sm-6 mt-3">
+                                    <label for="ProductCategory" class="form-label">Product Name</label>
+                                    <select class="form-control" id="ProductCategory" required>
+                                        <option value="" disabled selected>Select Product Name</option>
+                                        <option value="category1">Bottel</option>
+                                        <option value="category2">Tiffin</option>
+                                        <option value="category3">School Bag </option>
+                                        <!-- Add more options as needed -->
+                                    </select>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="offerTitle" class="form-label">Offer Title</label>
+                                    <input type="text" class="form-control" id="offerTitle" placeholder="Offer Title"
+                                        required>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="discountPercentage" class="form-label">Discount Price</label>
+                                    <input type="number" class="form-control" id="discountPercentage"
+                                        placeholder="Discount Percentage" required>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="startDate" class="form-label">Start Date</label>
+                                    <input type="date" class="form-control" id="startDate" required>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="endDate" class="form-label">End Date</label>
+                                    <input type="date" class="form-control" id="endDate" required>
+                                </div>
+
+
+
+                                <div class="col-sm-6">
+                                    <label for="offerDescription" class="form-label">Offer Description</label>
+                                    <textarea class="form-control" id="offerDescription" rows="3"
+                                        placeholder="Offer Description" required></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="offerImage" class="form-label">Image Upload</label>
+                                    <input class="form-control" type="file" id="offerImage" multiple>
+                                </div>
+
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div class="container mt-5">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <button class="btn btn-primary flex-grow-1" type="submit">Add Offer</button>
+                                    <button class="btn btn-danger flex-grow-1" type="reset">Reset</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

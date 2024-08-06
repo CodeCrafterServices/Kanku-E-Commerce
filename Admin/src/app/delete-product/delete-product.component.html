@@ -1,0 +1,77 @@
+<div class="content-header">
+    <div class="card">
+        <div class="card-header">
+            <h1>Delete Product List</h1>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row g-5">
+                    <div class="col-md-5 col-lg-4 order-md-last">
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-sm-6 mt-3">
+                                    <input type="text" class="form-control" id="productId" placeholder="Search Product"
+                                        [(ngModel)]="searchTerm" name="productId">
+                                </div>
+                                <div class="col-sm-6 mt-3 d-flex align-items-end">
+                                    <button type="button" class="btn btn-secondary"
+                                        (click)="checkProduct()">Check</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-7 col-lg-8">
+                        <!-- Empty for now -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content-body">
+    <div class="card">
+        <div class="container mt-2">
+            <div class="row">
+                <div class="col">
+                    <!-- Button Container -->
+                    <div class="d-flex justify-content-end mb-2">
+                        <button class="btn btn-dark mr-1" (click)="downloadPDF()">Download PDF</button>
+                        <button class="btn btn-dark mr-1" (click)="downloadCSV()">Download CSV</button>
+                        <button class="btn btn-dark" (click)="print()">Print</button>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped" style="margin-top: 10px;">
+                            <thead class="table__head">
+                                <tr class="winner__table">
+                                    <th>No.</th>
+                                    <th><i class="fa fa-user" aria-hidden="true"></i> Product Name</th>
+                                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Price</th>
+                                    <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Date</th>
+                                    <th><i class="fa fa-phone" aria-hidden="true"></i> Supplier Contact</th>
+                                    <th><i class="fa fa-trophy" aria-hidden="true"></i> Image</th>
+                                    <th><i class="fa fa-trash" aria-hidden="true"></i> Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let product of filteredProducts" class="winner__table">
+                                    <td>{{ product.no }}</td>
+                                    <td>{{ product.name }}</td>
+                                    <td>{{ product.price }}</td>
+                                    <td>{{ product.dropPrice }}</td>
+                                    <td>{{ product.supplier }}</td>
+                                    <td><img [src]="product.image" alt="Product Image" class="coin"></td>
+                                    <td><fa-icon [icon]="editIcon"></fa-icon></td>
+                                </tr>
+                                <tr *ngIf="filteredProducts.length === 0" class="winner__table">
+                                    <td colspan="7" class="text-center">No products found</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

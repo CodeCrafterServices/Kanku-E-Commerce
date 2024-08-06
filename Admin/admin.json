@@ -1,0 +1,29 @@
+{
+    "Add products": [
+        {
+            "id": "9d32",
+            "name": "Abrar"
+        },
+        {
+            "id": "554c",
+            "name": "Abrar",
+            "image": "src\\assets\\images\\bottle.jpg"
+        },
+        {
+            "id": "9e0c",
+            "name": "Abrar",
+            "image": "src\\assets\\images\\bottle.jpg"
+        },
+        {
+            "id": "6b34",
+            "name": "Abrar",
+            "image": "src\\assets\\images\\bottle.jpg"
+        },
+        {
+            "id": "d1ad",
+            "name": "Abrar",
+            "image": "src\\assets\\images\\bottle.jpg",
+            "age": 23
+        }
+    ]
+}

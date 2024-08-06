@@ -1,0 +1,13 @@
+.card-header{
+    text-align: left;
+    
+
+  }
+
+  .content-header .card-header h1 {
+    background-color: #343a40; /* This is the Bootstrap dark color */
+    color: white; /* To ensure the text is readable on the dark background */
+    width: 100%; /* Makes the h1 take the full width of its container */
+    padding: 20px; /* Optional: adds some padding for better spacing */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}

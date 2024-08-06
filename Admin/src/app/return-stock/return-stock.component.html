@@ -1,0 +1,81 @@
+<div class="content-header">
+  <div class="card">
+    <div class="card-header">
+      <h1>Return Stock</h1>
+    </div>
+    <div class="card-body">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-md-5 col-lg-4 order-md-last"></div>
+          <div class="col-md-7 col-lg-8">
+            <form class="needs-validation" novalidate="">
+              <div class="row g-3">
+                <div class="col-sm-6 mt-3">
+                  <select class="form-control" id="ProductCategory" required>
+                    <option value="" disabled selected>Select Product Category</option>
+                    <option value="Bottle">Bottle</option>
+                    <option value="Tiffin">Tiffin</option>
+                    <option value="School Bag">School Bag</option>
+                    <!-- Add more options as needed -->
+                  </select>
+                </div>
+                <!-- <div class="col-sm-6 mt-3">
+                  <select class="form-control" [(ngModel)]="itemsPerPage">
+                    <option *ngFor="let option of itemsPerPageOptions" [value]="option">{{ option }}</option>
+                  </select>
+                </div> -->
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-header">
+  <div class="card">
+    <div class="container mt-1">
+      <div class="row">
+        <div class="col">
+          <div class="d-flex justify-content-end mb-2">
+            <button id="downloadPdf" class="btn btn-dark mr-1">Download PDF</button>
+            <button id="downloadCsv" class="btn btn-dark mr-1">Download CSV</button>
+            <button id="print" class="btn btn-dark">Print</button>
+          </div>
+
+          <div class="container">
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped" id="productTable" style="margin-top:10px">
+                <thead class="table__head">
+                  <tr class="winner__table">
+                    <th>No.</th>
+                    <th><i class="fa fa-user" aria-hidden="true"></i> Product Name</th>
+                    <th><i class="fa fa-map-marker" aria-hidden="true"></i> Price</th>
+                    <th><i class="fa fa-calendar-o" aria-hidden="true"></i> Date</th>
+                    <th><i class="fa fa-phone" aria-hidden="true"></i> Supplier</th>
+                    <th><i class="fa fa-trophy" aria-hidden="true"></i> Image</th>
+                    <th><i class="fa fa-trophy" aria-hidden="true"></i> Category</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="winner__table"
+                    *ngFor="let item of filteredItems | paginate: { itemsPerPage: itemsPerPage, currentPage: currentPage }; let i = index">
+                    <td>{{ (currentPage - 1) * itemsPerPage + i + 1 }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.date }}</td>
+                    <td>{{ item.supplier }}</td>
+                    <td>{{ item.image }}</td>
+                    <td>{{ item.category }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

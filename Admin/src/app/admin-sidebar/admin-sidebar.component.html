@@ -1,0 +1,224 @@
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a routerLink="admin-home" class="brand-link mb-2">
+        <img src="../../../../../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
+            class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Kanku Enterprises</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <!-- <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="../../../../../assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2"
+                    alt="User Image">
+            </div>
+            <div class="info">
+                <a href="#" class="d-block">Alexander Pierce</a>
+            </div>
+        </div> -->
+
+        <!-- SidebarSearch Form -->
+        <div class="form-inline">
+            <div class="input-group" data-widget="sidebar-search">
+                <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-sidebar">
+                        <i class="fas fa-search fa-fw"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                <!-- Manage Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="manageProductsDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p class="font-size">
+                            Product
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="manageProductsDropdown">
+                        <a class="dropdown-item" routerLink="add-product">
+                            <i class="fas fa-plus-circle"></i> <!-- Icon for Add Products -->
+                            Add Products
+
+                        </a>
+                        <a class="dropdown-item" routerLink="show-product">
+                            <i class="fas fa-plus-circle"></i>
+                            Show Products
+                        </a>
+                        <a class="dropdown-item" routerLink="update-product">
+                            <i class="fas fa-plus-circle"></i>
+                            Update Products
+                        </a>
+                        <a class="dropdown-item" routerLink="delete-product">
+                            <i class="fas fa-plus-circle"></i>
+                            Delete Products
+                        </a>
+                        <a class="dropdown-item" routerLink="special-offer">
+                            <i class="fas fa-plus-circle"></i>
+                            Special Offer
+                        </a>
+
+                    </div>
+                </li>
+
+                <!-- Add Purchases Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="addPurchasesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p class="font-size">
+                            Inventory
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="addPurchasesDropdown">
+
+
+                        <a class="dropdown-item" routerLink="add-supplier">
+                            <i class="fas fa-plus-circle"></i>
+                            Add Suplier
+                        </a>
+                        <a class="dropdown-item" routerLink="return-stock">
+                            <i class="fas fa-plus-circle"></i>
+                            Return Stock
+                        </a>
+                        <a class="dropdown-item" routerLink="show-stock">
+                            <i class="fas fa-plus-circle"></i>
+                            Show Stock
+                        </a>
+                    </div>
+                </li>
+
+
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="addPurchasesDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p class="font-size">
+                            Order Details
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="addPurchasesDropdown">
+                        <a class="dropdown-item" routerLink="customer-order">
+                            <i class="fas fa-plus-circle"></i>
+                            Customer Order
+                        </a>
+                        <a class="dropdown-item" routerLink="pending-order">
+                            <i class="fas fa-plus-circle"></i>
+                            Pending Order
+                        </a>
+                        <a class="dropdown-item" routerLink="completed-order">
+                            <i class="fas fa-plus-circle"></i>
+                            Completed Order
+                        </a>
+                        <a class="dropdown-item" routerLink="return-order">
+                            <i class="fas fa-plus-circle"></i>
+                            Return Order
+                        </a>
+                    </div>
+                </li>
+
+                <!-- Add Sales Dropdown -->
+
+
+                <!-- <li class="nav-item ">
+                    <a class="nav-link" routerLink="show-stock">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p class="font-size text-center">
+                           Show Stock
+                        </p>
+                    </a>
+                </li> -->
+
+
+
+                <!-- Add Customer Dropdown -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="addCustomerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        <p>
+                            ADD CUSTOMER
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="addCustomerDropdown">
+                        <a class="dropdown-item" routerLink="customer-option1">Customer Option 1</a>
+                        <a class="dropdown-item" routerLink="customer-option2">Customer Option 2</a>
+                    </div>
+                </li> -->
+
+                <!-- Show Products Dropdown -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="showProductsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fab fa-product-hunt"></i>
+                        <p>
+                            SHOW PRODUCTS
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="showProductsDropdown">
+                        <a class="dropdown-item" routerLink="show-product1">Show Option 1</a>
+                        <a class="dropdown-item" routerLink="show-product2">Show Option 2</a>
+                    </div>
+                </li> -->
+
+                <!-- Show Purchases Dropdown -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="showPurchasesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-shopping-basket"></i>
+                        <p>
+                            SHOW PURCHASES
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="showPurchasesDropdown">
+                        <a class="dropdown-item" routerLink="show-purchase1">Show Purchases Option 1</a>
+                        <a class="dropdown-item" routerLink="show-purchase2">Show Purchases Option 2</a>
+                    </div>
+                </li> -->
+
+                <!-- Show Sales Dropdown -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="showSalesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fab fa-adversal"></i>
+                        <p>
+                            SHOW SALES
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="showSalesDropdown">
+                        <a class="dropdown-item" routerLink="show-sales1">Show Sales Option 1</a>
+                        <a class="dropdown-item" routerLink="show-sales2">Show Sales Option 2</a>
+                    </div>
+                </li> -->
+
+                <!-- Show Customer Dropdown -->
+                <!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="showCustomerDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                        <p>
+                            SHOW CUSTOMER
+                        </p>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="showCustomerDropdown">
+                        <a class="dropdown-item" routerLink="show-customer1">Show Customer Option 1</a>
+                        <a class="dropdown-item" routerLink="show-customer2">Show Customer Option 2</a>
+                    </div>
+                </li> -->
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
