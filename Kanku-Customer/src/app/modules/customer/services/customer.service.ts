@@ -2,11 +2,15 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import BASE_URL from '../../../auth/services/helper';
+import { Size } from './interfaces/size.interface';
+import { Cart } from './interfaces/cart.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
+  [x: string]: any;
+
 
   constructor(private http: HttpClient) { }
 
@@ -28,6 +32,13 @@ export class CustomerService {
 
   public deleteCartItem(cart: any): Observable<any> {
     return this.http.post(BASE_URL + "/cart/deleteCartItem", cart);
+  }
+
+  public orderProduct(order: any): Observable<any> {
+    return this.http.post(BASE_URL + "/order/orderProduct", order);
+  }
+  updateCartItem(item: Cart): Observable<any> {
+    return this.http.put(`/api/cart/update`, item);
   }
 
 }

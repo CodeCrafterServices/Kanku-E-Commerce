@@ -12,6 +12,7 @@
     </div>
 </div>
 <!-- Breadcrumb End -->
+
 <!-- Cart Start -->
 <div class="container-fluid">
     <div class="row px-xl-5">
@@ -37,7 +38,19 @@
                         </td>
                         <td *ngFor="let p of c.sizes" class="align-middle">₹ {{p.productPrice}}</td>
                         <td *ngFor="let p of c.sizes" class="align-middle">
-                            <p class="alifn-middle">{{p.totalProductQuantity}}</p>
+                            <div class="input-group quantity mx-auto" style="width: 100px;">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-minus" (click)="decreaseQuantity(p,c)"><i
+                                            class="fa fa-minus"></i></button>
+                                </div>
+                                <input type="text"
+                                    class="form-control form-control-sm bg-secondary border-0 text-center" #product_qty
+                                    readonly [value]="p.totalProductQuantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-primary btn-plus" (click)="increaseQuantity(p,c)"><i
+                                            class="fa fa-plus"></i></button>
+                                </div>
+                            </div>
                         </td>
                         <td *ngFor="let p of c.sizes" class="align-middle">₹ {{p.totalAmount}}</td>
                         <td class="align-middle">
@@ -45,7 +58,6 @@
                                     class="fa fa-times"></i></a>
                         </td>
                     </tr>
-
                 </tbody>
             </table>
         </div>
@@ -58,26 +70,15 @@
                     </div>
                 </div>
             </form>
-            <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Cart
-                    Summary</span></h5>
+            <h5 class="section-title position-relative text-uppercase mb-3">
+                <span class="bg-secondary pr-3">Cart Summary</span>
+            </h5>
             <div class="bg-light p-30 mb-5">
-                <div class="border-bottom pb-2">
-                    <div class="d-flex justify-content-between mb-3">
-                        <h6>Subtotal</h6>
-                        <h6>$150</h6>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                        <h6 class="font-weight-medium">Shipping</h6>
-                        <h6 class="font-weight-medium">$10</h6>
-                    </div>
-                </div>
+                <div class="border-bottom pb-2"></div>
                 <div class="pt-2">
-                    <div class="d-flex justify-content-between mt-2">
-                        <h5>Total</h5>
-                        <h5>$160</h5>
-                    </div>
-                    <a routerLink="/customer-purchase-home/checkout"
-                        class="btn btn-block btn-primary font-weight-bold my-3 py-3">Proceed To Checkout</a>
+                    <a (click)="proceedToCheckout()" class="btn btn-block btn-primary font-weight-bold my-3 py-3">
+                        Proceed To Checkout
+                    </a>
                 </div>
             </div>
         </div>

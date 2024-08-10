@@ -180,7 +180,7 @@
         Products</span></h2>
     <div class="row px-xl-5">
 
-      <div *ngFor="let p of products " class="col-lg-3 col-md-4 col-sm-6 pb-1">
+      <!-- <div *ngFor="let p of products " class="col-lg-3 col-md-4 col-sm-6 pb-1">
         <div class="product-item bg-light mb-4">
           <div class="product-img position-relative overflow-hidden" *ngFor="let img of p.productImage">
             <img class="img-fluid w-100" [src]="img.safeUrl" alt="">
@@ -206,7 +206,44 @@
             </div>
           </div>
         </div>
+      </div> -->
+
+
+
+      <div *ngFor="let p of products" class="col-lg-3 col-md-4 col-sm-6 pb-1">
+        <div class="product-item bg-light mb-4">
+          <div class="product-img position-relative overflow-hidden">
+            <img class="img-fluid w-100" [src]="p.productImage[0]?.safeUrl" alt="{{ p.productName }}"
+              style="height: 200px; width: auto; object-fit: cover;">
+            <div class="product-action">
+              <a class="btn btn-outline-dark btn-square"><i class="fa fa-shopping-cart"></i></a>
+              <a class="btn btn-outline-dark btn-square" routerLink="/customer-purchase-home/details/{{p.productId}}">
+                <i class="fa fa-info"></i>
+              </a>
+            </div>
+          </div>
+          <div class="text-center py-4">
+            <a class="h6 text-decoration-none text-truncate" href="">{{ p.productName }}</a>
+
+            <div class="d-flex align-items-center justify-content-center mt-2">
+              <h5>₹{{ p.productPrice }}</h5>
+              <!-- <h6 class="text-muted ml-2"><del>₹{{ p.originalPrice }}</del></h6> -->
+            </div>
+            <div class="d-flex align-items-center justify-content-center mb-1">
+              <small class="fa fa-star text-primary mr-1"></small>
+              <small class="fa fa-star text-primary mr-1"></small>
+              <small class="fa fa-star text-primary mr-1"></small>
+              <small class="fa fa-star text-primary mr-1"></small>
+              <small class="fa fa-star text-primary mr-1"></small>
+              <small>(99)</small>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
+
 
     </div>
   </div>

@@ -5,6 +5,7 @@ import { map } from 'rxjs';
 import { Product } from '../../services/interfaces/product.interface';
 import { ImageProcessingService } from '../../../../auth/services/image-processing.service';
 
+
 @Component({
   selector: 'app-customer-home',
   templateUrl: './customer-home.component.html',
@@ -16,6 +17,7 @@ export class CustomerHomeComponent implements OnInit {
     private imageProcessingService: ImageProcessingService) { }
 
   products: Product[] = []
+
 
   ngOnInit(): void {
 
